@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Accueil
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,34 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Accueil</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div>
+    <h1 class="ion-text-center ion-padding"><em>Le bateau de Thibault</em></h1>
+    <p class="ion-text-center ion-padding">
+      Vente en direct de notre bateau<br>
+      Produits selon la saison, livraisons sur Paris
+    </p>
+    <p class="ion-padding ion-text-center">
+      <ion-icon name="call"></ion-icon> 06 63 99 99 78<br>
+      <ion-icon name="mail"></ion-icon> : <a href="mailto:lebateaudethibault@gmail.com">lebateaudethibault@gmail.com</a><br>
+      <ion-icon name="logo-facebook"></ion-icon> : <a href="http://www.facebook.com/lebateaudethibault">La page de facebook de "Le bateau de Thibault"</a>
+    </p>
   </div>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col>Produits et promotions</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Bateaux</ion-col>
+      <ion-col>Restaurants</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Recettes</ion-col>
+      <ion-col>Contact</ion-col>
+    </ion-row>  
+  </ion-grid>
 </ion-content>

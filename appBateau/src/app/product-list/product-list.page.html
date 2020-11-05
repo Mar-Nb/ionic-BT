@@ -1,9 +1,35 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>product-list</ion-title>
+    <ion-title>
+      Ionic Infinite List
+      {{itemListData}}
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" class="ion-padding">
+
+
+  <ion-list>
+
+    <ion-item *ngFor="let product of itemListData">
+
+      <ion-label>
+        <ion-text>
+          <h2>{{product.name}}</h2>
+        </ion-text>
+        <ion-text color="medium">
+          <p>{{product.price}}</p>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite()">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
 
 </ion-content>

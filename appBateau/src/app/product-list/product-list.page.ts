@@ -23,8 +23,11 @@ export class ProductListPage implements OnInit, OnDestroy {
                 this.itemListData = products;
             }
         );
-        this.httpConfigService.getProducts();
+        this.httpConfigService.getProducts('0');
         this.httpConfigService.emitProducts();
+    }
+    getProducts(){
+        this.httpConfigService.getProducts(this.itemListData.length.toString());
     }
     onNewProduct(){
         this.router.navigate(['/products', 'new']);
@@ -39,7 +42,8 @@ export class ProductListPage implements OnInit, OnDestroy {
         this.productsSubscription.unsubscribe();
     }
 
-  doInfinite() {
-    this.httpConfigService.getProducts();
+  doInfinite(event) {
+      this.getProducts();
+      event.target.complete();
   }
 }

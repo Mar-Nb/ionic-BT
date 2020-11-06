@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" RouterLink="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+ <div>
+    <h1 class="ion-text-center ion-padding"><em>Le bateau de Thibault</em></h1>
+    <p class="ion-text-center ion-padding">
+      Vente en direct de notre bateau<br>
+      Produits selon la saison, livraisons sur Paris
+    </p>
+    
+    <ion-grid style="height: 100%">
+      <ion-row justify-content-center align-items-center style="height: 100%; flex-direction: column">
+        <img src="../../assets/thibault.jpg" />
+      </ion-row>
+   </ion-grid>
+
+    <ion-grid class="ion-padding-top">
+      <ion-row class="ion-text-center">
+        <ion-col>
+          <ion-button href="tel:+33663999978"><ion-icon name="call" slot="icon-only"></ion-icon></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button href="mailto:lebateaudethibault@gmail.com"><ion-icon name="mail" slot="icon-only"></ion-icon></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button href="http://www.facebook.com/lebateaudethibault"><ion-icon name="logo-facebook" class="no-border" slot="icon-only"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center">
+        <ion-col>Nous appeler</ion-col>
+        <ion-col>Envoyer un mail</ion-col>
+        <ion-col> Facebook</ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </div>
+
+</ion-content>

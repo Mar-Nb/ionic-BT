@@ -3,12 +3,13 @@
         "nom": "Le bistrot des Gascons",
         "adresse": "26 Avenue de Tourville, 75007 Paris",
         "site": "https://www.lebistrotdesgascons.fr",
-        "tel": "+331455717",
+        "tel": "01 45 57 75 17",
+        "raccourci_tel": "+33145577517",
         "image": "assets/images-restaurant/le-bistrot-des-gascons.jpg",
         "description": "Bistrot à l'esprit contemporain, entre ampoules nues et accents de briques, et au menu français traditionnel.",
         "res_sociaux": {
-            "facebook": "https://www.facebook.com/lebistrotdesgascons/",
-            "instagram": "https://www.instagram.com/explore/locations/1185299801502681/le-bistrot-des-gascons/"
+            "facebook": "https://www.facebook.com/lebistrotdesgascons",
+            "instagram": "https://www.instagram.com/explore/locations/1185299801502681/le-bistrot-des-gascons"
         },
         "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d10469728-Reviews-Le_Bistrot_Des_Gascons-Paris_Ile_de_France.html"
     },
@@ -16,12 +17,13 @@
         "nom": "Les fous de l'île",
         "adresse": "33 Rue des Deux Ponts, 75004 Paris",
         "site": "https://www.lesfousdelile.com/",
-        "tel": "+33143257667",
+        "tel": "01 43 25 76 67",
+        "raccourci_tel": "+33143257667",
         "image": "assets/images-restaurant/les-fous-de-l-ile.jpg",
         "description": "Brunchs et plats français axés sur la viande dans un lieu de style chaleureux décoré de figurines de poules.",
         "res_sociaux": {
             "facebook": "https://www.facebook.com/lesfousdelile",
-            "instagram": "https://www.instagram.com/lesfousdelile/"
+            "instagram": "https://www.instagram.com/lesfousdelile"
         },
         "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d805948-Reviews-Les_Fous_de_l_Ile-Paris_Ile_de_France.html"
     },
@@ -29,12 +31,13 @@
         "nom": "Le Bistrot Landais",
         "adresse": "104 Rue du Cherche-Midi, 75006 Paris",
         "site": "",
-        "tel": "+33142226623",
+        "tel": "01 42 22 66 23",
+        "raccourci_tel": "+33142226623",
         "image": "assets/images-restaurant/bistrot_landais.jpg",
         "description": "",
         "res_sociaux": {
-            "facebook": "http://www.facebook.com/lebistrotlandais/",
-            "instagram": "https://www.instagram.com/lebistrotlandais/"
+            "facebook": "http://www.facebook.com/lebistrotlandais",
+            "instagram": "https://www.instagram.com/lebistrotlandais"
         },
         "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d2322744-Reviews-Le_Bistrot_Landais-Paris_Ile_de_France.html"
     },
@@ -42,7 +45,8 @@
         "nom": "Villa 9-Trois",
         "adresse": "71 Rue Hoche, 93100 Montreuil",
         "site": "https://villa9trois.com/la-carte/",
-        "tel": "+33148581737",
+        "tel": "01 48 58 17 37",
+        "raccourci_tel": "+33148581737",
         "image": "assets/images-restaurant/villa-9-trois.jpg",
         "description": "Cuisine gastronomique moderne et raffinée dans le cadre classique d'une villa avec cheminée et terrasse.",
         "res_sociaux": {
@@ -55,7 +59,8 @@
         "nom": "Bistrot du Sommelier",
         "adresse": "97 Boulevard Haussmann, 75008 Paris",
         "site": "https://bistrotdusommelier.eu/bds/",
-        "tel": "+33142652485",
+        "tel": "01 42 65 24 85",
+        "raccourci_tel": "+33142652485",
         "image": "assets/images-restaurant/bistrot-du-sommelier.jpg",
         "description": "Étoffes fleuries et pierres apparentes pour des plats traditionnels mariés à des vins par un sommelier réputé.",
         "res_sociaux": {

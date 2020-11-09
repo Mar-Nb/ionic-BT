@@ -23,11 +23,11 @@ export class ProductListPage implements OnInit, OnDestroy {
                 this.itemListData = products;
             }
         );
-        this.httpConfigService.getProducts('0');
+        this.httpConfigService.getProducts(0);
         this.httpConfigService.emitProducts();
     }
     getProducts(){
-        this.httpConfigService.getProducts(this.itemListData.length.toString());
+        this.httpConfigService.getProducts(this.itemListData.length);
     }
     onNewProduct(){
         this.router.navigate(['/products', 'new']);

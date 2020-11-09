@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Product} from '../../model/Product.model';
 import {Subject} from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/database';
-import {ResponseList} from './ResponseList';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,10 +11,9 @@ export class ProductListService {
   path = 'http://51.255.166.155:1352/tig/products/';
   products: Product[];
   productSubject = new Subject<Product[]>();
-  private responseList: ResponseList = new ResponseList(this.products);
   constructor(public firebase: AngularFireDatabase
   ) {
-    this.products = new Array();
+    this.products = [];
   }
 
   emitProducts(){
@@ -26,13 +25,13 @@ export class ProductListService {
   }
 
   getProducts(value) {
-    this.firebase.database.ref('/products').orderByChild('id').startAt(4).limitToFirst(2).on('value', (data) => {
-      console.log(data.val());
-      this.responseList = data.val() ;
-      console.log(this.responseList.listProduct);
-      if (this.responseList.listProduct != null) {
-        this.responseList.listProduct = this.responseList.listProduct.filter((t): t is Product => !!t);
-        this.responseList.listProduct.forEach(product => this.adding(product));
+    this.firebase.database.ref('/products').orderByChild('id').startAt(value).limitToFirst(10).on('value', (data) => {
+      let myMap = new Map();
+      myMap = data.val();
+      if (myMap != null) {
+        Object.keys(myMap).forEach(key => {
+          this.adding(myMap[key]);
+        });
       }
       this.emitProducts();
     });

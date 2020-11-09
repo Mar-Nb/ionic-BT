@@ -14,8 +14,8 @@ export class RestaurantPage implements OnInit {
   constructor(private restoServ: RestaurantService, private router: Router) { }
 
   ngOnInit() {
-    this.restoServ.getRestaurants().subscribe(
-      (response) => { this.listeRestaurant = response; },
+    this.restoServ.getRestaurants().then(
+      (response) => { this.listeRestaurant = response.val(); },
       (error) => { console.log("Erreur !", error) });
   }
 

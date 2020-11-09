@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Product} from '../../model/Product.model';
 import {Subject} from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/database';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,10 +11,9 @@ export class ProductListService {
   path = 'http://51.255.166.155:1352/tig/products/';
   products: Product[];
   productSubject = new Subject<Product[]>();
-
   constructor(public firebase: AngularFireDatabase
   ) {
-    this.getProducts();
+    this.products = [];
   }
 
   emitProducts(){
@@ -24,13 +24,24 @@ export class ProductListService {
     this.firebase.database.ref('/products').set(this.products);
   }
 
-  getProducts() {
-    this.firebase.database.ref('/products').on('value', (data) => {
-      this.products = data.val() ? data.val() : [];
+  getProducts(value) {
+    this.firebase.database.ref('/products').orderByChild('id').startAt(value).limitToFirst(10).on('value', (data) => {
+      let myMap = new Map();
+      myMap = data.val();
+      if (myMap != null) {
+        Object.keys(myMap).forEach(key => {
+          this.adding(myMap[key]);
+        });
+      }
       this.emitProducts();
     });
   }
-
+  adding(product: Product){
+    if (!product){
+      return;
+    }
+    this.products.push(product);
+  }
   getSingleProduct(id: number) {
   }
 

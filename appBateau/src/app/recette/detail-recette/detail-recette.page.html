@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{ detail.nom }}
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" RouterLink="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="main">
+    <section>
+      <h1>  {{ detail.nom_recette}} </h1>
+      <p>Dégustez votre recette comme chez Thibault.</p>
+    </section>
+    
+    <img src="{{ detail.image }}" alt='Image du restaurant "{{ detail.nom }}"' />
+
+    <section>
+      <h2>Information</h2>
+      <ion-grid >
+        <ion-row>
+          <ion-col>
+            <a >
+              <ion-icon name="basket" style="zoom: 1.5 " color="dark"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a>
+              <ion-icon name="time" style="zoom: 1.5 " color="dark"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a>
+              <ion-icon name="body" style="zoom: 1.5 " color="dark"></ion-icon>
+            </a>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><p>{{ detail.nbingredient }}</p></ion-col>
+          <ion-col><p>{{ detail.tps }}</p></ion-col>
+          <ion-col><p>{{ detail.nbpersonne }}</p></ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+
+    <section>
+      <ion-grid class="ion-text-center">
+        <p><ion-icon name="restaurant" class="tab icone-info" style="zoom:4.0;" color="danger" ></ion-icon></p>
+      </ion-grid>
+
+      <h3>Les Etapes : </h3>
+      <p> {{ detail.recette }} </p>
+    </section>
+    
+
+  </div>
+
+</ion-content>

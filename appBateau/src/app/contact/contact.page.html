@@ -1,33 +1,26 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Accueil
-    </ion-title>
     <ion-buttons slot="start">
-      <ion-menu-button auto-hide="false"></ion-menu-button>
+      <ion-back-button defaultHref="home" RouterLink="/home"></ion-back-button>
     </ion-buttons>
-    <ion-buttons slot="primary">
-      <ion-button shape="round">
-        <ion-icon size="large" name="cart"></ion-icon>
-        <ion-badge class="badge-one" color="danger">?</ion-badge>
-      </ion-button>
-    </ion-buttons>
+    <ion-title>Contact</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Accueil</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
 
-  <div>
+ <div>
     <h1 class="ion-text-center ion-padding"><em>Le bateau de Thibault</em></h1>
     <p class="ion-text-center ion-padding">
       Vente en direct de notre bateau<br>
       Produits selon la saison, livraisons sur Paris
     </p>
+    
+    <ion-grid style="height: 100%">
+      <ion-row justify-content-center align-items-center style="height: 100%; flex-direction: column">
+        <img src="../../assets/images-contact/thibault.jpg" />
+      </ion-row>
+   </ion-grid>
 
     <ion-grid class="ion-padding-top">
       <ion-row class="ion-text-center">
@@ -44,22 +37,10 @@
       <ion-row class="ion-text-center">
         <ion-col>Nous appeler</ion-col>
         <ion-col>Envoyer un mail</ion-col>
-        <ion-col>Voir la page Facebook</ion-col>
+        <ion-col> Facebook</ion-col>
       </ion-row>
     </ion-grid>
+    
   </div>
 
-  <ion-grid class="grid-bottom">
-    <ion-row>
-      <ion-col routerLink="/product-list">Produits et promotions</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>Bateaux</ion-col>
-      <ion-col  routerLink="/restaurant">Restaurants</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col routerLink="/recette">Recettes</ion-col>
-      <ion-col routerLink="/contact">Contact</ion-col>
-    </ion-row>  
-  </ion-grid>
 </ion-content>

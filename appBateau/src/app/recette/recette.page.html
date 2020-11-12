@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" RouterLink="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nos Recettes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card *ngFor="let recette of listeRecette">
+    <img src="{{ recette.image }}" alt="Image de la recette {{ recette.nom }}" />
+    <ion-card-header>
+      <ion-card-subtitle>{{ recette.restaurant }}</ion-card-subtitle>
+      <ion-card-title>{{ recette.nom }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p *ngIf="recette.description !== ''">{{ recette.description }}</p>
+      <ion-button fill="outline" expand="block" (click)="ouvrirPageDetail(recette)">Plus d'infos <ion-icon name="recette-outline" slot="start"></ion-icon></ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

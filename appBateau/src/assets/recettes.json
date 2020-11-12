@@ -1,0 +1,44 @@
+[
+    {
+        "nom": "Homard",
+        "image": "assets/images-recette/homard.jpg",
+        "description": "Le homard est un animal paisible qui devient d'un beau rouge à la cuisson.",
+        "restaurant": "Le bateau Thibault",
+        "nom_recette":"Homard en chaud-froid",
+        "recette":"\t 1) faites cuire les homards dans l'eau bouillante avec du thym \n 2) prenez 5 tomates",
+        "nbpersonne":"4 personnes",
+        "nbingredient":"8 ingredients",
+        "tps":"2h"
+
+
+    },
+
+    {
+        "nom": "St Jacques",
+        "image": "assets/images-recette/St-Jacques.jpg",
+        "description": "L'honneur, c'est comme les coquilles Saint-Jacques : bien lavé, ça ressert.",
+        "restaurant": "Le bateau Thibault",
+        "nom_recette":"Noid de St Jacques\n flambées au cognac",
+        "recette":"\t 1) faites cuire les coquilles dans l'eau bouillante avec du thym \n 2) prenez 5 tomates",
+        "nbpersonne":"2 personnes",
+        "nbingredient":"6 ingredients",
+        "tps":"45min"
+
+
+    },
+
+    {
+        "nom": "Bar",
+        "image": "assets/images-recette/bar.jpg",
+        "description": "Tout homme qui aime le poisson a l'esprit délicat.",
+        "restaurant": "Le bateau Thibault",
+        "nom_recette":"Bar rôti au laurier frais",
+        "recette":"\t 1) faites cuire les coquilles dans l'eau bouillante avec du thym \n 2) prenez 5 tomates",
+        "nbpersonne":"4 personnes",
+        "nbingredient":"7 ingredients",
+        "tps":"45min"
+
+
+    }
+
+]

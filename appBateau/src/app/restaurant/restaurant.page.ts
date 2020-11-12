@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { FormRestaurantComponent } from './form-restaurant/form-restaurant.component';
 import { RestaurantService } from './restaurant.service';
 
 @Component({
@@ -10,8 +12,7 @@ import { RestaurantService } from './restaurant.service';
 export class RestaurantPage implements OnInit {
 
   listeRestaurant: any[];
-  images: any[] = new Array(); testImages: any[] = new Array();
-  constructor(private restoServ: RestaurantService, private router: Router) { }
+  constructor(private restoServ: RestaurantService, private router: Router, private modalC: ModalController) { }
 
   ngOnInit() {
     this.restoServ.getRestaurants().then(
@@ -45,4 +46,14 @@ export class RestaurantPage implements OnInit {
     this.router.navigate(['restaurant', 'detail-restaurant'], navExtra);
   }
 
+  async ouvrirFormulaireRestaurant() {
+    const modal = await this.modalC.create({
+      component: FormRestaurantComponent,
+      componentProps: {
+        'controller': this.modalC
+      }
+    });
+
+    return await modal.present();
+  }
 }

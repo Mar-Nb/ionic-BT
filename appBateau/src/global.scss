@@ -56,23 +56,27 @@
 .badge-one {
   position: absolute;
   top: 0px;
-  right: -4px;
+  left: calc(50% + 1px);
   font-size: 0.7em;
   --padding-start: 5px;
   --padding-end: 5px;
-  border-radius: 50%;
+  border-radius: 8px;
 }
 
 .badge-two {
   position: absolute;
   top: 0px;
-  right: -4px;
+  left: calc(50% + 1px);
   font-size: 0.7em;
   --padding-start: 3px;
   --padding-end: 3px;
-  border-radius: 50%;
+  border-radius: 8px;
 }
 
 ion-icon {
   vertical-align: text-top;
+}
+
+ion-tab-bar {
+  max-width: inherit;
 }

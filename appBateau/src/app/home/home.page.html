@@ -16,12 +16,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Accueil</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div>
     <h1 class="ion-text-center ion-padding"><em>Le bateau de Thibault</em></h1>
     <p class="ion-text-center ion-padding">
@@ -51,15 +45,20 @@
 
   <ion-grid class="grid-bottom">
     <ion-row>
-      <ion-col routerLink="/product-list">Produits et promotions</ion-col>
+      <ion-col>
+        <ion-slides pager="true" [options]="slideOpts" #slideWithNav (ionSlideDidChange)="SlideDidChange(slider,slideWithNav)">
+          <ion-slide *ngFor="let s of slider.slideItems">
+            <p>
+              <b>{{ s.titre }}</b>
+              <br>
+              <span class="texte-slide">{{ s.description }}</span>
+            </p>
+            <ion-buttons slot="end">
+              <ion-button routerLink="{{ s.route }}"><ion-icon name="arrow-forward" slot="icon-only"></ion-icon></ion-button>
+            </ion-buttons>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col>Bateaux</ion-col>
-      <ion-col  routerLink="/restaurant">Restaurants</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col routerLink="/recette">Recettes</ion-col>
-      <ion-col routerLink="/contact">Contact</ion-col>
-    </ion-row>  
   </ion-grid>
 </ion-content>

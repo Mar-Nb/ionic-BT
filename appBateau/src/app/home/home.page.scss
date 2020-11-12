@@ -5,5 +5,21 @@ ion-grid.grid-bottom {
 
 ion-grid.grid-bottom ion-col {
   border: 3px solid #8c8c8c;
-  margin: 5px;
+}
+
+.grid-bottom ion-buttons {
+  margin-left: 17%;
+}
+
+ion-slide {
+  margin-bottom: 10px;
+}
+
+.texte-slide {
+  color: var(--ion-color-step-600, #60646b);
+}
+
+ion-slide b {
+  padding-bottom: 7%;
+  line-height: 2.5;
 }

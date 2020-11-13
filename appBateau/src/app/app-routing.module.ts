@@ -22,6 +22,18 @@ const routes: Routes = [
     path: 'restaurant',
     loadChildren: () => import('./restaurant/restaurant.module').then( m => m.RestaurantPageModule)
   },
+  {
+    path: 'signin',
+    loadChildren: () => import('./auth/signin/signin.module').then( m => m.SigninPageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./auth/signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'header',
+    loadChildren: () => import('./header/header.module').then( m => m.HeaderPageModule)
+  },
 
 
 ];

@@ -1,9 +1,17 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-title>
+      Contact
+    </ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="home"></ion-back-button>
+      <ion-menu-button auto-hide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Contact</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button shape="round">
+        <ion-icon size="large" name="cart"></ion-icon>
+        <ion-badge class="badge-one" color="danger">?</ion-badge>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

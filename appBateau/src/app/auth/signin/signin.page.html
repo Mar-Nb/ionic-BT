@@ -26,10 +26,10 @@
       <ion-button type="submit" (click)="logIn(email, password)" color="light" expand="block" shape="round" fill="outline">Connexion</ion-button>
 
       <br>
-      <ion-button color="tertiary" expand="block" shape="round">Inscription</ion-button>
+      <ion-button type="submit" (click)="signUp(email, password)" color="tertiary" expand="block" shape="round">Inscription</ion-button>
     </form>
     <ion-item lines="none">
-      <ion-label color="light" text-center>Ou connectez-vous avec</ion-label>
+      <ion-label color="light">Ou connectez-vous avec</ion-label>
     </ion-item>
 
     <div class="flex">
@@ -37,7 +37,9 @@
         <ion-icon slot="start" name="logo-facebook"></ion-icon>
         Facebook
       </ion-button>
-      <ion-button color="google" color="youtube" shape="round">
+      <ion-button color="google"
+                  (click)="authService.GoogleAuth()"
+                  shape="round">
         <ion-icon slot="start" name="logo-google"></ion-icon>
         Google
       </ion-button>

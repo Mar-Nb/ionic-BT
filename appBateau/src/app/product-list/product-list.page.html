@@ -8,22 +8,31 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
 
+  <ion-content>
 
-  <ion-list>
+    <ion-list>
+      <ion-card *ngFor="let product of itemListData">
+        <ion-card-header>
+          <ion-card-title>{{ product.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="8">
+              <ion-label color="secondary">
+                <b>{{ product.price | currency:'USD' }}</b>
+              </ion-label>
+            </ion-col>
+            <ion-col size="4" class="ion-text-right">
+              <ion-button fill="clear" (click)="addToCart(product)">
+                <ion-icon name="add"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ion-content>
 
-    <ion-item *ngFor="let product of itemListData">
-
-      <ion-label>
-        <ion-text>
-          <h2>{{product.name}}</h2>
-        </ion-text>
-        <ion-text color="medium">
-          <p>{{product.price}}</p>
-        </ion-text>
-      </ion-label>
-    </ion-item>
-
-  </ion-list>
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
     <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">

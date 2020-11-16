@@ -23,7 +23,10 @@ export class ProductListService {
   saveProducts(){
     this.firebase.database.ref('/products').set(this.products);
   }
-
+  addToCard(product: Product){
+    product.stock = product.stock - 1;
+    this.firebase.database.ref('/products/' + product.id).update(product);
+  }
   getProducts(value) {
     this.firebase.database.ref('/products').orderByChild('id').startAt(value).limitToFirst(10).on('value', (data) => {
       let myMap = new Map();

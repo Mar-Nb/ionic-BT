@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ProductListService} from './product-list-service/product-list.service';
+import {ProductListService} from '../services/product-list-service/product-list.service';
 import {Subscription} from 'rxjs';
 import {Product} from '../model/Product.model';
 import {Router} from '@angular/router';
@@ -29,6 +29,7 @@ export class ProductListPage implements OnInit, OnDestroy {
     getProducts(){
         this.httpConfigService.getProducts(this.itemListData.length);
     }
+
     onNewProduct(){
         this.router.navigate(['/products', 'new']);
     }
@@ -40,6 +41,9 @@ export class ProductListPage implements OnInit, OnDestroy {
     }
     ngOnDestroy() {
         this.productsSubscription.unsubscribe();
+    }
+    addToCart(product: Product){
+        this.httpConfigService.addToCard(product);
     }
 
   doInfinite(event) {

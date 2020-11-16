@@ -35,7 +35,12 @@ export class AuthService {
   SignIn(email, password) {
     return this.ngFireAuth.signInWithEmailAndPassword(email, password);
   }
-
+  async SendVerificationMail() {
+    return await (await this.ngFireAuth.currentUser).sendEmailVerification()
+        .then(() => {
+          this.router.navigate(['verify-email']);
+        });
+  }
   // Register user with email/password
   RegisterUser(email, password) {
     return this.ngFireAuth.createUserWithEmailAndPassword(email, password);
@@ -55,13 +60,13 @@ export class AuthService {
   // Returns true when user is looged in
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
-    return (user !== null && user.emailVerified !== false) ? true : false;
+    return (user !== null && user.emailVerified !== false);
   }
 
   // Returns true when user's email is verified
   get isEmailVerified(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
-    return (user.emailVerified !== false) ? true : false;
+    return (user.emailVerified !== false);
   }
 
   // Sign in with Gmail

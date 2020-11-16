@@ -20,13 +20,23 @@ export class SigninPage implements OnInit {
     this.authService.SignIn(email.value, password.value)
         .then((res) => {
           if (this.authService.isEmailVerified) {
-            this.router.navigate(['dashboard']);
+            this.router.navigate(['product-list']);
           } else {
             window.alert('Email is not verified');
             return false;
           }
         }).catch((error) => {
       window.alert(error.message);
+    });
+  }
+  signUp(email, password){
+      this.authService.RegisterUser(email.value, password.value)
+          .then((res) => {
+            // Do something here
+            this.authService.SendVerificationMail();
+            this.router.navigate(['verify-email']);
+        }).catch((error) => {
+        window.alert(error.message);
     });
   }
 

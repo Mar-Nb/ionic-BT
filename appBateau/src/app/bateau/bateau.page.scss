@@ -15,7 +15,19 @@
     text-align: center;
 }
 
-.img{
+ion-card-content p {
+    padding-bottom: 10px;
+}
+
+ion-card {
+    margin-bottom: 30px;
+}
+
+ion-card-subtitle {
+    font-style: italic;
+}
+
+ion-card img {
     max-height: 20em;
 }
 

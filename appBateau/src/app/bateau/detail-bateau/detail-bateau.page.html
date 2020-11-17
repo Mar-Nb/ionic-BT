@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{ detail.nom }}
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" RouterLink="/bateau"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  
+  <div class="main">
+    <section>
+      <h1> Votre bateau du jour : le {{detail.nom}} </h1>
+      <p class="ion-padding"> <em>Tout savoir sur notre bateau partenaire.</em></p>
+    </section>
+
+    <img src="{{ detail.image }}" alt='Image du bateau "{{ detail.nom }}"' />
+
+    <section >
+      <h2>Informations générales</h2>
+      <ion-grid id="grid-bateau" >
+        <ion-row detail>
+          <ion-col>
+            <a >
+              <ion-icon name="people-circle-outline" style="zoom: 2 " color="dark"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a>
+              <ion-icon name="beaker-outline" style="zoom: 2 " color="dark"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a>
+              <ion-icon name="boat" style="zoom: 2 " color="dark"></ion-icon>
+            </a>
+          </ion-col>
+        </ion-row>
+        <ion-row >
+          <ion-col><p>{{ detail.nbpersonne }}</p></ion-col>
+          <ion-col><p>{{ detail.contenance  }}</p></ion-col>
+          <ion-col><p>{{ detail.type }}</p></ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+
+    <section>
+      <h2>Description :</h2>
+      <p> {{ detail.information }} </p>
+      <ion-fab left bottom>
+        <ion-fab-button color="secondary"><ion-icon name="caret-forward-outline"></ion-icon></ion-fab-button>
+        <ion-fab-list side="end">
+          <ion-button href="mailto:{{detail.mail}}"><ion-icon name="mail" slot="icon-only"></ion-icon></ion-button>
+          <ion-button href="{{detail.tel}}"><ion-icon name="call" slot="icon-only"></ion-icon></ion-button>
+        </ion-fab-list>
+      </ion-fab>
+
+
+    </section>
+
+
+
+
+  </div>
+  
+
+</ion-content>

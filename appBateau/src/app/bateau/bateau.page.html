@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Bateaux
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button shape="round">
+        <ion-icon size="large" name="cart"></ion-icon>
+        <ion-badge class="badge-one" color="danger">?</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <div id="title" class="ion-text-center">
+    <h1 class="ion-padding"><em>Bateaux partenaires</em></h1>
+    <p class="ion-padding"><em>Tous les bateaux partenaires avec le bateau de Thibault.</em></p>
+  </div>
+
+  <ion-card *ngFor="let boat of listeBateau">
+    <img src="{{ boat.image }}" alt="Image de la recette {{ boat.nom }}" />
+    <ion-card-header>
+      <ion-card-subtitle>{{ boat.surnom }}</ion-card-subtitle>
+      <ion-card-title>{{ boat.nom }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p *ngIf="boat.description !== ''">{{ boat.description }}</p>
+      <ion-button fill="outline" expand="block" (click)="ouvrirPageDetail(boat)">Plus d'infos <ion-icon name="boat" slot="start"></ion-icon></ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

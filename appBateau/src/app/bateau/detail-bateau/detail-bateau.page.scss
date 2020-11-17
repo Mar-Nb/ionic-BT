@@ -1,0 +1,37 @@
+img {
+    max-width: 90%;
+    border-radius: 5%;
+    max-height: 20em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab {
+    margin-right: 10px;
+}
+
+.icone-info {
+    width: 20px;
+    height: 20px;;
+}
+
+.main {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#grid-bateau {
+    text-align: center;
+}
+
+#grid-res-social ion-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.main section:not(:last-child) {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid darkgrey;
+}

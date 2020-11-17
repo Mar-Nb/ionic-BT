@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'introuvable',
     loadChildren: () => import('./introuvable/introuvable.module').then( m => m.IntrouvablePageModule)
   },
+  {
+    path: 'bateau',
+    loadChildren: () => import('./bateau/bateau.module').then( m => m.BateauPageModule)
+  },
 
 
 ];

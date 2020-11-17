@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Recette
+      Recettes
     </ion-title>
     <ion-buttons slot="start">
       <ion-menu-button auto-hide="false"></ion-menu-button>
@@ -16,6 +16,12 @@
 </ion-header>
 
 <ion-content fullscreen>
+
+  <div id="title" class="ion-text-center">
+    <h1 class="ion-padding"><em>Nos Recettes</em></h1>
+    <p class="ion-padding"><em>Toutes vos recettes préférées à refaire à la maison.</em></p>
+  </div>
+
   <ion-card *ngFor="let recette of listeRecette">
     <img src="{{ recette.image }}" alt="Image de la recette {{ recette.nom }}" />
     <ion-card-header>

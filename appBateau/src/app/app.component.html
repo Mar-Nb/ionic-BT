@@ -42,8 +42,9 @@
       <ion-list>
         <ion-list-header>Paramètres</ion-list-header>
         <ion-item>
+          <ion-icon slot="start" name="moon"></ion-icon>
           Mode Sombre
-          <ion-toggle slot="end" (click)="presentToast(); fermerMenu();"></ion-toggle>
+          <ion-toggle #themeToggle slot="end" (ionChange)="toggleModeSombre()" [checked]="isDarkMode" (click)="fermerMenu();"></ion-toggle>
         </ion-item>
       </ion-list>
     </ion-content>

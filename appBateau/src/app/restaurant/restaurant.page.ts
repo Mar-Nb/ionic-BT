@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
-import { FormRestaurantComponent } from './form-restaurant/form-restaurant.component';
+import { FormRestaurantPage } from './form-restaurant/form-restaurant.page';
 import { RestaurantService } from './restaurant.service';
 
 @Component({
@@ -29,8 +29,6 @@ export class RestaurantPage implements OnInit {
             });
           });
         });
-
-        console.log("restaurants", this.listeRestaurant);
       },
       (error) => { console.log("Erreur !", error) }
     );
@@ -48,7 +46,7 @@ export class RestaurantPage implements OnInit {
 
   async ouvrirFormulaireRestaurant() {
     const modal = await this.modalC.create({
-      component: FormRestaurantComponent,
+      component: FormRestaurantPage,
       componentProps: {
         'controller': this.modalC
       }

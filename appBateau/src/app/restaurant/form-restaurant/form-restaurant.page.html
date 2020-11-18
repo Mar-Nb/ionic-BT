@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Demande de partenariat</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button shape="round" (click)="fermerFormulaire()">
+        <ion-icon size="large" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Vous voulez devenir partenaire ? C'est par ici !</h1>
+  <form [formGroup]="formulaire" (ngSubmit)="soumettreFormulaire()">
+    <h2>Vos informations</h2>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nom (obligatoire)</ion-label>
+        <ion-input placeholder="Votre prénom" formControlName="nom" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Prénom (obligatoire)</ion-label>
+        <ion-input placeholder="Votre nom" formControlName="prenom" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email (obligatoire)</ion-label>
+        <ion-input placeholder="ex: mail@domain.fr" formControlName="mail" inputmode="email" type="email" required></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <h2>Informations concernant votre restaurant</h2>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nom (obligatoire)</ion-label>
+        <ion-input placeholder="ex: Le Baratie" formControlName="nomRestaurant" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Adresse (obligatoire)</ion-label>
+        <ion-input placeholder="ex: 123 Rue de l'impasse" formControlName="adresse" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Code postal (obligatoire)</ion-label>
+        <ion-input placeholder="ex: 75000" formControlName="code" inputmode="numeric" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Site internet ?</ion-label>
+        <ion-input placeholder="ex: www.lebateaudethibault.fr" formControlName="site" inputmode="url" type="url"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Numéro de téléphone</ion-label>
+        <ion-input placeholder="ex: 01 23 45 67 89" formControlName="tel" inputmode="tel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-textarea placeholder="Votre activité, vos réseaux sociaux, ..." formControlName="description"></ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <ion-button type="submit" expand="block" [disabled]="!formulaire.valid">
+      Envoyer
+      <ion-icon name="send" slot="end"></ion-icon>
+    </ion-button>
+  </form>
+</ion-content>

@@ -11,7 +11,11 @@ const routes: Routes = [
   {
     path: 'detail-restaurant',
     loadChildren: () => import('./detail-restaurant/detail-restaurant.module').then( m => m.DetailRestaurantPageModule)
+  },  {
+    path: 'form-restaurant',
+    loadChildren: () => import('./form-restaurant/form-restaurant.module').then( m => m.FormRestaurantPageModule)
   }
+
 ];
 
 @NgModule({

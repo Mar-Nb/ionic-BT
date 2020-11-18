@@ -15,9 +15,25 @@ export class BateauPage implements OnInit {
   constructor(private bateauServ: BateauService, private router: Router) { }
 
   ngOnInit() {
-    this.bateauServ.getBateau().subscribe(
-      (response) => { this.listeBateau = response; },
-      (error) => { console.log("Erreur !", error) });
+    this.bateauServ.getBateaux().then(
+      (response) => {
+        this.listeBateau = response.val();
+
+        this.bateauServ.getImagesDatabase().subscribe((images) => {
+          images.forEach((image) => {
+            this.bateauServ.getImagesStorage(image).subscribe(imageUrl => {
+              let nomImage = image.payload.exportVal().nom;
+              this.listeBateau.forEach(element => {
+                if (element.nom == nomImage) { element["url"] = imageUrl; }
+              });
+            });
+          });
+        });
+
+        console.log("bateaux", this.listeBateau);
+      },
+      (error) => { console.log("Erreur !", error) }
+    );
   }
 
   ouvrirPageDetail(boat) {

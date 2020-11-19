@@ -23,7 +23,7 @@
   </div>
 
   <ion-card *ngFor="let recette of listeRecette">
-    <img src="{{ recette.image }}" alt="Image de la recette {{ recette.nom }}" />
+    <img src="{{ recette.url }}" alt="Image de la recette {{ recette.nom }}" />
     <ion-card-header>
       <ion-card-subtitle>{{ recette.restaurant }}</ion-card-subtitle>
       <ion-card-title>{{ recette.nom }}</ion-card-title>

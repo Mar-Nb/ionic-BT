@@ -14,9 +14,25 @@ export class RecettePage implements OnInit {
   constructor(private recetteServ: RecetteService, private router: Router) { }
 
   ngOnInit() {
-    this.recetteServ.getRecettes().subscribe(
-      (response) => { this.listeRecette = response; },
-      (error) => { console.log("Erreur !", error) });
+    this.recetteServ.getRecettes().then(
+      (response) => {
+        this.listeRecette = response.val();
+
+        this.recetteServ.getImagesDatabase().subscribe((images) => {
+          images.forEach((image) => {
+            this.recetteServ.getImagesStorage(image).subscribe(imageUrl => {
+              let nomImage = image.payload.exportVal().nom;
+              this.listeRecette.forEach(element => {
+                if (element.nom == nomImage) { element["url"] = imageUrl; }
+              });
+            });
+          });
+        });
+
+        console.log("recettes", this.listeRecette);
+      },
+      (error) => { console.log("Erreur !", error) }
+    );
   }
 
   ouvrirPageDetail(recette) {
@@ -29,5 +45,6 @@ export class RecettePage implements OnInit {
     this.router.navigate(['recette', 'detail-recette'], navExtra);
     
   }
+
 
 }

@@ -1,14 +1,24 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BateauService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private firebase: AngularFireDatabase, private firestore: AngularFireStorage) { }
 
-  getBateau() {
-    return this.http.get<any[]>("assets/bateaux.json");
+  getBateaux() {
+    return this.firebase.database.ref("/bateaux").once("value");
+  }
+
+  getImagesDatabase() {
+    return this.firebase.list("bateaux").snapshotChanges(["child_added"]);
+  }
+
+  getImagesStorage(image: any) {
+    const imgRef = image.payload.exportVal().image;
+    return this.firestore.ref(imgRef).getDownloadURL();
   }
 }

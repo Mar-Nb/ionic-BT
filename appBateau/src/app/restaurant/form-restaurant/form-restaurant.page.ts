@@ -23,7 +23,7 @@ export class FormRestaurantPage implements OnInit {
       nomRestaurant: ['', Validators.required],
       adresse: ['', Validators.compose([
         Validators.required,
-        Validators.pattern("^[0-9]{1,3}\ ([a-zA-Zéàèç]+\ ?)+$")
+        Validators.pattern("^[0-9]{1,3}\ ([a-zA-Zéàèç']+\ ?)+$")
       ])],
       code: ['', Validators.compose([
         Validators.required,

@@ -4,8 +4,8 @@
 
 
     <ion-list>
-      <ion-card *ngFor="let product of itemListData; let i = index" (click)="onViewProduct(i)">
-        <ion-card-header>
+      <ion-card *ngFor="let product of itemListData; let i = index">
+        <ion-card-header (click)="onViewProduct(i)">
           <ion-card-title>{{ product.name }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>

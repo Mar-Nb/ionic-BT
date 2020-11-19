@@ -1,9 +1,51 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>product-single</ion-title>
+    <ion-title>
+      {{ product.name }}
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" RouterLink="/product-list"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-{{product.price}}
+
+  <div class="main">
+    <section>
+      <h1> <em>{{product.name}}</em> </h1>
+    </section>
+
+    <img src="{{ product.image }}" alt='Image de la nourriture "{{ product.name }}"' />
+
+    <section >
+      <h2>Informations générales</h2>
+      <ion-grid id="grid-bateau" >
+        <ion-row product>
+          <ion-col>
+            <a >
+              <ion-icon name="people-circle-outline" style="zoom: 2 " color="dark"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a>
+              <ion-icon name="expand" style="zoom: 2 " color="dark"></ion-icon>
+            </a>
+          </ion-col>
+        </ion-row>
+        <ion-row >
+          <ion-col><p>{{ product.owner }}</p></ion-col>
+          <ion-col><p>{{ product.unit }}</p></ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </section>
+
+    <section>
+      <h2>Description :</h2>
+      <p> {{ product.comments }} </p>
+
+
+    </section>
+  </div>
 </ion-content>

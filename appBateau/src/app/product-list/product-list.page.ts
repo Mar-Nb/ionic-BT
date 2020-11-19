@@ -43,7 +43,7 @@ export class ProductListPage implements OnInit, OnDestroy {
         this.productsSubscription.unsubscribe();
     }
     addToCart(product: Product){
-        this.httpConfigService.addToCard(product, this.httpConfigService.getCart());
+        this.httpConfigService.addToCard(product);
     }
 
   doInfinite(event) {

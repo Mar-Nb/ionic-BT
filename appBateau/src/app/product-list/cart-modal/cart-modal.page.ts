@@ -3,6 +3,7 @@ import {ProductListService} from '../../services/product-list-service/product-li
 import {AlertController, ModalController} from '@ionic/angular';
 import {Product} from '../../model/Product.model';
 import {ItemCart} from '../../model/ItemCart';
+import {Storage} from '@ionic/storage';
 
 @Component({
   selector: 'app-cart-modal',
@@ -12,21 +13,24 @@ import {ItemCart} from '../../model/ItemCart';
 export class CartModalPage implements OnInit {
   cart: ItemCart[] = [];
 
-  constructor(private productListService: ProductListService, private modalCtrl: ModalController, private alertCtrl: AlertController) { }
+  // tslint:disable-next-line:max-line-length
+  constructor(private productListService: ProductListService, private modalCtrl: ModalController, private alertCtrl: AlertController, public storage: Storage) { }
 
   ngOnInit() {
-    this.cart = this.productListService.getCart();
+    this.storage.get('Cart').then((data: ItemCart[]) => {
+      this.cart = data;
+    });
   }
   decreaseCartItem(product, i) {
     this.productListService.decreaseToCard(product, i);
   }
 
   increaseCartItem(product) {
-    this.productListService.addToCard(product, this.cart);
+    this.productListService.addToCard(product);
   }
 
-  removeCartItem(product) {
-    this.productListService.removeProduct(product);
+  removeCartItem(product, i) {
+    this.productListService.removeToCard(product, i);
   }
 
   getTotal() {

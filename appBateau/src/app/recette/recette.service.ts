@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +8,18 @@ import { HttpClient } from '@angular/common/http';
 
 export class RecetteService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private firebase: AngularFireDatabase, private firestore: AngularFireStorage) { }
 
   getRecettes() {
-    return this.http.get<any[]>("assets/recettes.json");
+    return this.firebase.database.ref("/recettes").once("value");
+  }
+
+  getImagesDatabase() {
+    return this.firebase.list("recettes").snapshotChanges(["child_added"]);
+  }
+
+  getImagesStorage(image: any) {
+    const imgRef = image.payload.exportVal().image;
+    return this.firestore.ref(imgRef).getDownloadURL();
   }
 }

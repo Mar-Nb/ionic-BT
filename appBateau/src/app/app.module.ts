@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
+
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -37,6 +39,7 @@ export const firebaseConfig = {
   providers: [
     StatusBar,
     SplashScreen,
+    EmailComposer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

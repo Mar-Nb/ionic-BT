@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { AlertController, ModalController } from '@ionic/angular';
 
 @Component({
@@ -11,6 +12,7 @@ export class FormRestaurantPage implements OnInit {
 
   @Input() controller: ModalController;
   formulaire: FormGroup;
+  emailComp: EmailComposer = new EmailComposer();
 
   constructor(private alertController: AlertController, private formBuilder: FormBuilder) {
     this.formulaire = this.formBuilder.group({
@@ -65,6 +67,17 @@ export class FormRestaurantPage implements OnInit {
         }, {
           text: 'Envoyer',
           handler: () => {
+            let emailComp: EmailComposer = new EmailComposer();
+            let email = {
+              to: 'm.niombela@cfa-insta.fr',
+              subject: 'Demande de partenariat',
+              body: this.formulaire.value,
+              isHtml: true
+            }
+            emailComp.open(email).then(
+              (obj) => { console.log(obj); },
+              (error) => { console.log(error); }
+            );
             this.fermerFormulaire();
             console.log('Confirm Okay', this.formulaire.value);
           }
@@ -73,6 +86,13 @@ export class FormRestaurantPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  logAccountMail(composer: EmailComposer) {
+    composer.hasAccount().then((apps: []) => {
+      // Returns an array of configured email clients for the device
+      console.log("Log client mail : ", apps);
+    });
   }
 
 }

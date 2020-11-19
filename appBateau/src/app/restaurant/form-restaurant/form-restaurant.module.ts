@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -16,6 +17,7 @@ import { FormRestaurantPage } from './form-restaurant.page';
     IonicModule,
     FormRestaurantPageRoutingModule
   ],
-  declarations: [FormRestaurantPage]
+  declarations: [FormRestaurantPage],
+  providers: [EmailComposer]
 })
 export class FormRestaurantPageModule {}

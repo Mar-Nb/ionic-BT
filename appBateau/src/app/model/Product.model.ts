@@ -9,4 +9,5 @@ export class Product {
     discount: number;
     comments: string;
     owner: string;
+    stock: number;
 }

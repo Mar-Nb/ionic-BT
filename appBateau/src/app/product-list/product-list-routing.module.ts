@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'product-single',
     loadChildren: () => import('./product-single/product-single.module').then( m => m.ProductSinglePageModule)
+  },
+  {
+    path: 'cart-modal',
+    loadChildren: () => import('./cart-modal/cart-modal.module').then( m => m.CartModalPageModule)
   }
 ];
 

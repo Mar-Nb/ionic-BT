@@ -12,9 +12,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'product-form',
-    loadChildren: () => import('./product-list/product-form/product-form.module').then(m => m.ProductFormPageModule)
-  },  {
+    path: 'products/view/:id',
+    loadChildren: () => import('./product-list/product-single/product-single.module').then(m => m.ProductSinglePageModule)
+  },
+  {
     path: 'product-list',
     loadChildren: () => import('./product-list/product-list.module').then( m => m.ProductListPageModule)
   },
@@ -37,6 +38,18 @@ const routes: Routes = [
   {
     path: 'bateau',
     loadChildren: () => import('./bateau/bateau.module').then( m => m.BateauPageModule)
+  },
+  {
+    path: 'signin',
+    loadChildren: () => import('./auth/signin/signin.module').then( m => m.SigninPageModule)
+  },
+  {
+    path: 'header',
+    loadChildren: () => import('./header/header.module').then( m => m.HeaderPageModule)
+  },
+  {
+    path: 'verify-email',
+    loadChildren: () => import('./auth/verify-email/verify-email.module').then( m => m.VerifyEmailPageModule)
   },
 
 

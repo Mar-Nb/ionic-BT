@@ -1,4 +1,19 @@
-<app-header></app-header>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Accueil
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button shape="round">
+        <ion-icon size="large" name="cart"></ion-icon>
+        <ion-badge class="badge-one" color="danger">?</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content [fullscreen]="true">
   <div>
@@ -30,15 +45,20 @@
 
   <ion-grid class="grid-bottom">
     <ion-row>
-      <ion-col>Produits et promotions</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>Bateaux</ion-col>
-      <ion-col>Restaurants</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>Recettes</ion-col>
-      <ion-col>Contact</ion-col>
+      <ion-col>
+        <ion-slides pager="true" [options]="slideOpts" #slideWithNav (ionSlideDidChange)="SlideDidChange(slider,slideWithNav)">
+          <ion-slide *ngFor="let s of slider.slideItems">
+            <p>
+              <b>{{ s.titre }}</b>
+              <br>
+              <span class="texte-slide">{{ s.description }}</span>
+            </p>
+            <ion-buttons slot="end">
+              <ion-button routerLink="{{ s.route }}"><ion-icon name="arrow-forward" slot="icon-only"></ion-icon></ion-button>
+            </ion-buttons>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

@@ -1,0 +1,36 @@
+.icon {
+    display: inline-block;
+    font-size: 35px;
+    color: #ffC977;
+    vertical-align: middle;
+    text-align: center;
+    width: 20px;
+    height: 20px;;
+   }
+
+.main {
+    margin-right: 5%;
+    margin-left: 5%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+img {
+    max-width: 90%;
+    border-radius: 5%;
+    max-height: 20em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+$colors: (
+  primary:    #387ef5,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  vibrant:    rebeccapurple,
+  bright:     #ffc125
+);
+

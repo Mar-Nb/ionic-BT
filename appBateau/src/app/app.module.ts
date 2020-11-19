@@ -18,14 +18,13 @@ import {HeaderPageModule} from './header/header.module';
 import { IonicStorageModule } from '@ionic/storage';
 
 export const firebaseConfig = {
-
-  apiKey: 'AIzaSyBjbnSl3UjEzzK9QydyMlpYJndUw0ernXE',
-  authDomain: 'bateau-thibault.firebaseapp.com',
-  databaseURL: 'https://bateau-thibault.firebaseio.com',
-  projectId: 'bateau-thibault',
-  storageBucket: 'bateau-thibault.appspot.com',
-  messagingSenderId: '772574567236',
-  appId: '1:772574567236:web:008576b17c8ac5577e5511'
+  apiKey: "AIzaSyBjbnSl3UjEzzK9QydyMlpYJndUw0ernXE",
+  authDomain: "bateau-thibault.firebaseapp.com",
+  databaseURL: "https://bateau-thibault.firebaseio.com",
+  projectId: "bateau-thibault",
+  storageBucket: "bateau-thibault.appspot.com",
+  messagingSenderId: "772574567236",
+  appId: "1:772574567236:web:008576b17c8ac5577e5511"
 };
 @NgModule({
   declarations: [AppComponent],

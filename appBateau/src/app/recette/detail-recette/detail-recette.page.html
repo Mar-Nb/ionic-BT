@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{ detail.nom }}
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" RouterLink="/recette"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="main">
+    <section>
+      <h1>  {{ detail.nom_recette}} </h1>
+      <p>Dégustez votre recette comme chez Thibault.</p>
+    </section>
+    
+    <img src="{{ detail.image }}" alt='Image du restaurant "{{ detail.nom }}"' />
+
+    <section >
+      <h2>Informations :</h2>
+      <ion-grid >
+        <ion-row detail>
+          <ion-col>
+            <a >
+              <ion-icon name="basket" style="zoom: 1.5 " color="dark"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a>
+              <ion-icon name="time" style="zoom: 1.5 " color="dark"></ion-icon>
+            </a>
+          </ion-col>
+          <ion-col>
+            <a>
+              <ion-icon name="body" style="zoom: 1.5 " color="dark"></ion-icon>
+            </a>
+          </ion-col>
+        </ion-row>
+        <ion-row >
+          <ion-col><p>{{ detail.nbingredient }}</p></ion-col>
+          <ion-col><p>{{ detail.tps }}</p></ion-col>
+          <ion-col><p>{{ detail.nbpersonne }}</p></ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+
+    <section >
+      <ion-grid class="ion-text-center">
+        <p><ion-icon name="cart-outline"  style="zoom:4.0;" color="danger" ></ion-icon></p>
+      </ion-grid>
+
+      <h3>Les Ingredients : </h3>
+      <ion-list  *ngFor="let item of receipe" >
+        <ion-item>
+          <ion-label>{{item}}</ion-label>
+          <ion-select placeholder="Select One" >
+            <ion-select-option>Ok</ion-select-option>
+            <ion-select-option >à acheter</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </section>
+
+
+    <section>
+      <ion-grid class="ion-text-center">
+        <p><ion-icon name="restaurant" class="tab icone-info" style="zoom:4.0;" color="danger" ></ion-icon></p>
+      </ion-grid>
+
+      <h3>Les Etapes : </h3>
+      <ion-list  *ngFor="let item of etape" >
+        <ion-item>
+          <ion-label>{{item}}</ion-label>
+          <ion-select placeholder="Select One" >
+            <ion-select-option>Ok</ion-select-option>
+            <ion-select-option >à faire</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </section>
+    
+
+  </div>
+
+</ion-content>

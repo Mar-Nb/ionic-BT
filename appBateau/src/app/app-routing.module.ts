@@ -24,6 +24,22 @@ const routes: Routes = [
     loadChildren: () => import('./restaurant/restaurant.module').then( m => m.RestaurantPageModule)
   },
   {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'recette',
+    loadChildren: () => import('./recette/recette.module').then( m => m.RecettePageModule)
+  },
+  {
+    path: 'introuvable',
+    loadChildren: () => import('./introuvable/introuvable.module').then( m => m.IntrouvablePageModule)
+  },
+  {
+    path: 'bateau',
+    loadChildren: () => import('./bateau/bateau.module').then( m => m.BateauPageModule)
+  },
+  {
     path: 'signin',
     loadChildren: () => import('./auth/signin/signin.module').then( m => m.SigninPageModule)
   },

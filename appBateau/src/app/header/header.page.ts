@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {AuthService} from '../services/auth/auth.service';
 import firebase from 'firebase';
 import {BehaviorSubject} from 'rxjs';
@@ -17,6 +17,7 @@ export class HeaderPage implements OnInit {
   isAuth: boolean;
   cartItemCount: BehaviorSubject<number>;
   @ViewChild('cart', {static: false, read: ElementRef})fab: ElementRef;
+  @Input() location: string;
 
   constructor(private authService: AuthService, private productListService: ProductListService, private modalCtrl: ModalController) { }
 

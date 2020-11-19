@@ -1,11 +1,11 @@
-<app-header></app-header>
+<app-header location="Product"></app-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
 
 
     <ion-list>
-      <ion-card *ngFor="let product of itemListData; let i = index" (click)="onViewProduct(i)">
-        <ion-card-header>
+      <ion-card *ngFor="let product of itemListData; let i = index">
+        <ion-card-header (click)="onViewProduct(i)">
           <ion-card-title>{{ product.name }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
@@ -22,7 +22,11 @@
             </ion-col>
           </ion-row>
         </ion-card-content>
+        <ion-chip color="danger" *ngIf="product.availability==false">
+          <ion-label color="danger">Indisponible</ion-label>
+        </ion-chip>
       </ion-card>
+
     </ion-list>
   </ion-content>
 

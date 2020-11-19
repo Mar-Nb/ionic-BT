@@ -22,7 +22,11 @@
             </ion-col>
           </ion-row>
         </ion-card-content>
+        <ion-chip color="danger" *ngIf="product.availability==false">
+          <ion-label color="danger">Indisponible</ion-label>
+        </ion-chip>
       </ion-card>
+
     </ion-list>
   </ion-content>
 

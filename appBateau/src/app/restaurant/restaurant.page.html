@@ -1,19 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Restaurants
-    </ion-title>
-    <ion-buttons slot="start">
-      <ion-menu-button auto-hide="false"></ion-menu-button>
-    </ion-buttons>
-    <ion-buttons slot="primary">
-      <ion-button shape="round">
-        <ion-icon size="large" name="cart"></ion-icon>
-        <ion-badge class="badge-one" color="danger">?</ion-badge>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<app-header location="Restaurant"></app-header>
 
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
   <ion-fab-button (click)="ouvrirFormulaireRestaurant()"><ion-icon name="add"></ion-icon></ion-fab-button>

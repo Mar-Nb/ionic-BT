@@ -10,11 +10,11 @@ import {Router} from '@angular/router';
   styleUrls: ['./product-list.page.scss'],
 })
 export class ProductListPage implements OnInit, OnDestroy {
+
+    constructor(private httpConfigService: ProductListService, private router: Router) { }
   url: string;
   itemListData: Product[];
   productsSubscription: Subscription;
-
-    constructor(private httpConfigService: ProductListService, private router: Router) { }
 
 
     ngOnInit(): void {
@@ -43,7 +43,7 @@ export class ProductListPage implements OnInit, OnDestroy {
         this.productsSubscription.unsubscribe();
     }
     addToCart(product: Product){
-        this.httpConfigService.addToCard(product);
+        this.httpConfigService.addToCard(product, this.httpConfigService.getCart());
     }
 
   doInfinite(event) {

@@ -1,17 +1,11 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Product List
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
 
   <ion-content>
 
     <ion-list>
-      <ion-card *ngFor="let product of itemListData">
+      <ion-card *ngFor="let product of itemListData; let i = index" (click)="onViewProduct(i)">
         <ion-card-header>
           <ion-card-title>{{ product.name }}</ion-card-title>
         </ion-card-header>
@@ -34,10 +28,7 @@
   </ion-content>
 
 
-  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
+
 
 
 </ion-content>

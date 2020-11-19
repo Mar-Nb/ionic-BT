@@ -12,8 +12,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'product-form',
-    loadChildren: () => import('./product-list/product-form/product-form.module').then(m => m.ProductFormPageModule)
+    path: 'products/view/:id',
+    loadChildren: () => import('./product-list/product-single/product-single.module').then(m => m.ProductSinglePageModule)
   },
   {
     path: 'product-list',

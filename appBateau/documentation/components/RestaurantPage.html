@@ -1,0 +1,656 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>appBateau documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">appBateau documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>RestaurantPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/restaurant/restaurant.page.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-restaurant</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./restaurant.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./restaurant.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#listeRestaurant">listeRestaurant</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ouvrirFormulaireRestaurant">ouvrirFormulaireRestaurant</a>
+                            </li>
+                            <li>
+                                <a href="#ouvrirPageDetail">ouvrirPageDetail</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(restoServ: <a href="../injectables/RestaurantService.html">RestaurantService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, modalC: ModalController)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/restaurant/restaurant.page.ts:14</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>restoServ</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RestaurantService.html" target="_self" >RestaurantService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalC</td>
+                                                  
+                                                        <td>
+                                                                    <code>ModalController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/app/restaurant/restaurant.page.ts:17</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ouvrirFormulaireRestaurant"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            ouvrirFormulaireRestaurant
+                        </b>
+                        <a href="#ouvrirFormulaireRestaurant"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ouvrirFormulaireRestaurant()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/restaurant/restaurant.page.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ouvrirPageDetail"></a>
+                    <span class="name">
+                        <b>
+                            ouvrirPageDetail
+                        </b>
+                        <a href="#ouvrirPageDetail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ouvrirPageDetail(resto)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/restaurant/restaurant.page.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>resto</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listeRestaurant"></a>
+                        <span class="name">
+                            <b>
+                            listeRestaurant</b>
+                            <a href="#listeRestaurant"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/restaurant/restaurant.page.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { NavigationExtras, Router } from &#x27;@angular/router&#x27;;
+import { ModalController } from &#x27;@ionic/angular&#x27;;
+import { FormRestaurantComponent } from &#x27;./form-restaurant/form-restaurant.component&#x27;;
+import { RestaurantService } from &#x27;./restaurant.service&#x27;;
+
+@Component({
+  selector: &#x27;app-restaurant&#x27;,
+  templateUrl: &#x27;./restaurant.page.html&#x27;,
+  styleUrls: [&#x27;./restaurant.page.scss&#x27;],
+})
+export class RestaurantPage implements OnInit {
+
+  listeRestaurant: any[];
+  constructor(private restoServ: RestaurantService, private router: Router, private modalC: ModalController) { }
+
+  ngOnInit() {
+    this.restoServ.getRestaurants().then(
+      (response) &#x3D;&gt; {
+        this.listeRestaurant &#x3D; response.val();
+
+        this.restoServ.getImagesDatabase().subscribe((images) &#x3D;&gt; {
+          images.forEach((image) &#x3D;&gt; {
+            this.restoServ.getImagesStorage(image).subscribe(imageUrl &#x3D;&gt; {
+              let nomImage &#x3D; image.payload.exportVal().nom;
+              this.listeRestaurant.forEach(element &#x3D;&gt; {
+                if (element.nom &#x3D;&#x3D; nomImage) { element[&quot;url&quot;] &#x3D; imageUrl; }
+              });
+            });
+          });
+        });
+
+        console.log(&quot;restaurants&quot;, this.listeRestaurant);
+      },
+      (error) &#x3D;&gt; { console.log(&quot;Erreur !&quot;, error) }
+    );
+  }
+
+  ouvrirPageDetail(resto) {
+    let navExtra: NavigationExtras &#x3D; {
+      state: {
+        restaurant: resto
+      }
+    };
+
+    this.router.navigate([&#x27;restaurant&#x27;, &#x27;detail-restaurant&#x27;], navExtra);
+  }
+
+  async ouvrirFormulaireRestaurant() {
+    const modal &#x3D; await this.modalC.create({
+      component: FormRestaurantComponent,
+      componentProps: {
+        &#x27;controller&#x27;: this.modalC
+      }
+    });
+
+    return await modal.present();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-header location&#x3D;&quot;Restaurant&quot;&gt;&lt;/app-header&gt;
+
+&lt;ion-fab vertical&#x3D;&quot;bottom&quot; horizontal&#x3D;&quot;end&quot; slot&#x3D;&quot;fixed&quot;&gt;
+  &lt;ion-fab-button (click)&#x3D;&quot;ouvrirFormulaireRestaurant()&quot;&gt;&lt;ion-icon name&#x3D;&quot;add&quot;&gt;&lt;/ion-icon&gt;&lt;/ion-fab-button&gt;
+&lt;/ion-fab&gt;
+
+&lt;ion-content&gt;
+  &lt;div id&#x3D;&quot;title&quot; class&#x3D;&quot;ion-text-center&quot;&gt;
+    &lt;h1 class&#x3D;&quot;ion-padding&quot;&gt;&lt;em&gt;Restaurants partenaires&lt;/em&gt;&lt;/h1&gt;
+    &lt;p class&#x3D;&quot;ion-padding&quot;&gt;&lt;em&gt;Tous les restaurants partenaires avec le bateau de Thibault.&lt;/em&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;ion-card *ngFor&#x3D;&quot;let resto of listeRestaurant&quot;&gt;
+    &lt;img src&#x3D;&quot;{{ resto.url }}&quot; alt&#x3D;&quot;Image du restaurant {{ resto.nom }}&quot; /&gt;
+    &lt;ion-card-header&gt;
+      &lt;ion-card-subtitle&gt;{{ resto.adresse }}&lt;/ion-card-subtitle&gt;
+      &lt;ion-card-title&gt;{{ resto.nom }}&lt;/ion-card-title&gt;
+    &lt;/ion-card-header&gt;
+  
+    &lt;ion-card-content&gt;
+      &lt;p *ngIf&#x3D;&quot;resto.description !&#x3D;&#x3D; &#x27;&#x27;&quot;&gt;{{ resto.description }}&lt;/p&gt;
+      &lt;ion-button fill&#x3D;&quot;outline&quot; expand&#x3D;&quot;block&quot; (click)&#x3D;&quot;ouvrirPageDetail(resto)&quot;&gt;Plus d&#x27;infos &lt;ion-icon name&#x3D;&quot;restaurant-outline&quot; slot&#x3D;&quot;start&quot;&gt;&lt;/ion-icon&gt;&lt;/ion-button&gt;
+    &lt;/ion-card-content&gt;
+  &lt;/ion-card&gt;
+&lt;/ion-content&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./restaurant.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">#title p {
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #8c8c8c;
+
+    margin: 0;
+}
+
+ion-card-content p {
+    padding-bottom: 10px;
+}
+
+ion-card {
+    margin-bottom: 30px;
+}
+
+ion-card-subtitle {
+    font-style: italic;
+}
+
+ion-card img {
+    max-height: 20em;
+}
+
+ion-fab {
+    margin-bottom: 5%;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-header location="Restaurant"></app-header><ion-fab vertical="bottom" horizontal="end" slot="fixed">  <ion-fab-button (click)="ouvrirFormulaireRestaurant()"><ion-icon name="add"></ion-icon></ion-fab-button></ion-fab><ion-content>  <div id="title" class="ion-text-center">    <h1 class="ion-padding"><em>Restaurants partenaires</em></h1>    <p class="ion-padding"><em>Tous les restaurants partenaires avec le bateau de Thibault.</em></p>  </div>    <ion-card *ngFor="let resto of listeRestaurant">    <img src="{{ resto.url }}" alt="Image du restaurant {{ resto.nom }}" />    <ion-card-header>      <ion-card-subtitle>{{ resto.adresse }}</ion-card-subtitle>      <ion-card-title>{{ resto.nom }}</ion-card-title>    </ion-card-header>      <ion-card-content>      <p *ngIf="resto.description !== \'\'">{{ resto.description }}</p>      <ion-button fill="outline" expand="block" (click)="ouvrirPageDetail(resto)">Plus d\'infos <ion-icon name="restaurant-outline" slot="start"></ion-icon></ion-button>    </ion-card-content>  </ion-card></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BateauPage', 'selector': 'app-bateau'},{'name': 'CartModalPage', 'selector': 'app-cart-modal'},{'name': 'ContactPage', 'selector': 'app-contact'},{'name': 'DetailBateauPage', 'selector': 'app-detail-bateau'},{'name': 'DetailRecettePage', 'selector': 'app-detail-recette'},{'name': 'DetailRestaurantPage', 'selector': 'app-detail-restaurant'},{'name': 'FormRestaurantComponent', 'selector': 'app-form-restaurant'},{'name': 'HeaderPage', 'selector': 'app-header'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'IntrouvablePage', 'selector': 'app-introuvable'},{'name': 'ProductFormPage', 'selector': 'app-product-form'},{'name': 'ProductListPage', 'selector': 'app-product-list'},{'name': 'ProductSinglePage', 'selector': 'app-product-single'},{'name': 'RecettePage', 'selector': 'app-recette'},{'name': 'RestaurantPage', 'selector': 'app-restaurant'},{'name': 'SigninPage', 'selector': 'app-signin'},{'name': 'VerifyEmailPage', 'selector': 'app-verify-email'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'RestaurantPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RestaurantPage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

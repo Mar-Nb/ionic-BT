@@ -22,10 +22,20 @@ export class CartModalPage implements OnInit {
       this.cart = data;
     });
   }
+
+  /**
+   * Remove one item from cart
+   * @param temporally product removed from cart
+   * @param identifier in cart list
+   */
   decreaseCartItem(product, i) {
     this.productListService.decreaseToCard(product, i);
   }
 
+  /**
+   * increase product in cart
+   * @param temporally product add to cart
+   */
   increaseCartItem(product) {
     this.productListService.addToCard(product);
   }

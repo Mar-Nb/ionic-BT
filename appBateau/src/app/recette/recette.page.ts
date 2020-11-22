@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { RecetteService } from './recette.service';
+import { RecetteService } from '../services/recette/recette.service';
 
 @Component({
   selector: 'app-recette',

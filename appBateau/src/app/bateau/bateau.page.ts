@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { BateauService } from './bateau.service';
+import { BateauService } from '../services/bateau/bateau.service';
 
 @Component({
   selector: 'app-bateau',

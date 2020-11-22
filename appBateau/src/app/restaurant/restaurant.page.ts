@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { FormRestaurantComponent } from './form-restaurant/form-restaurant.component';
-import { RestaurantService } from './restaurant.service';
+import { RestaurantService } from '../services/restaurant/restaurant.service';
 
 @Component({
   selector: 'app-restaurant',
